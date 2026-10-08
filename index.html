@@ -14,6 +14,7 @@
     .intro{padding:78px 0 76px;display:grid;grid-template-columns:1.6fr 1fr;gap:60px;align-items:end}.eyebrow{font-size:12px;font-weight:650;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin:0 0 24px}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.12;margin:0}h1{font-size:clamp(38px,5.5vw,62px);letter-spacing:-.035em}h1 span{display:block}.affiliation{margin:24px 0 0;line-height:1.65}.affiliation span{display:block;color:var(--muted);font-size:15px}.bio{color:var(--muted);font-size:17px;margin:0 0 20px}.research-link{font-size:14px;font-weight:600}.fields{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.fields span{border:1px solid var(--line);border-radius:3px;padding:5px 11px;font-size:12px;color:var(--muted)}
     .research{border-top:1px solid var(--line);padding:48px 0 75px;display:grid;grid-template-columns:220px 1fr;gap:35px}h2{font-size:32px}.section-note{color:var(--muted);font-size:13px;margin-top:12px}.paper-label{color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:650;margin:2px 0 16px}h3{font-size:clamp(27px,3.5vw,38px);line-height:1.18;max-width:650px}.paper-summary{font-size:18px;margin:24px 0;color:var(--ink);max-width:670px}.abstract{border-top:1px solid var(--line);margin-top:26px;padding-top:18px}summary{cursor:pointer;font-size:14px;font-weight:600}details p{color:var(--muted);font-size:16px;max-width:670px;margin-bottom:0}footer{border-top:1px solid var(--line);padding:24px 0 32px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     @media(max-width:760px){.wrap{padding:0 24px}header{padding:24px 0}.wordmark{font-size:13px}nav{gap:18px}.intro{grid-template-columns:1fr;gap:32px;padding:50px 0}.intro .eyebrow{margin-bottom:20px}.bio{max-width:550px}.research{grid-template-columns:1fr;gap:22px;padding:35px 0 50px}.section-note{display:none}.paper-summary{font-size:17px}h1 span{display:inline}h1 span+span:before{content:' '}}
+    .intro-links{display:flex;align-items:center;flex-wrap:wrap;gap:18px}.cv-link{display:inline-block;border:1px solid var(--ink);padding:8px 16px;border-radius:3px;font-size:14px;font-weight:600;text-decoration:none}.cv-link:hover{background:var(--ink);color:var(--paper)}header{flex-wrap:wrap}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
@@ -22,7 +23,7 @@
   <div class="wrap">
     <header>
       <a class="wordmark" href="#home">Gerardo Sanz-Maldonado</a>
-      <nav aria-label="Main navigation"><a href="#home">About</a><a href="#research">Research</a></nav>
+      <nav aria-label="Main navigation"><a href="#home">About</a><a href="#research">Research</a><a href="cv.pdf">CV</a></nav>
     </header>
     <main id="main">
       <section class="intro" id="home" aria-labelledby="name">
@@ -34,7 +35,7 @@
         </div>
         <div>
           <p class="bio">I am a PhD candidate in economics at the University of Michigan. My research interests are public economics and labor economics. My job market paper studies how France’s digital services tax affects web traffic to multinational digital platforms.</p>
-          <a class="research-link" href="#research">Explore my research <span aria-hidden="true">↗</span></a>
+          <div class="intro-links"><a class="cv-link" href="cv.pdf" download="Gerardo-Sanz-Maldonado-CV.pdf">Download CV <span aria-hidden="true">↓</span></a><a class="research-link" href="#research">Explore my research <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
       <section class="research" id="research" aria-labelledby="research-title">
