@@ -19,6 +19,7 @@
     .market-status{font-size:15px;line-height:1.6;color:var(--accent);margin:18px 0 0;max-width:440px}
     .email-contact{display:inline-block;margin:12px 0 0;padding:0;border:0;background:none;color:var(--ink);font:inherit;font-size:15px;text-decoration:underline;text-underline-offset:5px;cursor:pointer}.email-contact:hover{color:var(--accent)}.email-contact:focus-visible{outline:3px solid var(--accent);outline-offset:6px}
     .affiliation .school-name{position:relative;display:inline-block;cursor:default}.school-name:focus-visible{outline:2px solid #ffcb05;outline-offset:4px}.affiliation .school-cheer{position:absolute;left:calc(100% + 14px);top:50%;display:block;white-space:nowrap;background:#00274c;color:#ffcb05;border-radius:5px;padding:4px 10px;font:700 13px/1.5 system-ui,sans-serif;opacity:0;transform:translateY(-50%) scale(.85);pointer-events:none;transition:opacity .18s,transform .25s}.school-name:is(:hover,:focus) .school-cheer{opacity:1;transform:translateY(-50%) scale(1)}.school-cheer i{position:absolute;left:50%;top:50%;font-style:normal;color:#ffcb05;font-size:13px;opacity:0;--dx:0px;--dy:0px}.school-cheer i:nth-child(1){--dx:-46px;--dy:-29px}.school-cheer i:nth-child(2){--dx:5px;--dy:-37px;animation-delay:.1s!important}.school-cheer i:nth-child(3){--dx:48px;--dy:-23px;animation-delay:.2s!important}.school-cheer i:nth-child(4){--dx:45px;--dy:28px}.school-cheer i:nth-child(5){--dx:-6px;--dy:34px;animation-delay:.15s!important}.school-cheer i:nth-child(6){--dx:-48px;--dy:22px;animation-delay:.3s!important}.school-name:is(:hover,:focus) .school-cheer i{animation:cheer-burst 1.5s ease-out infinite}@keyframes cheer-burst{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}20%{opacity:1}80%,100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.2)}}
+    .references{border-top:1px solid var(--line);padding:48px 0 65px}.reference-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:30px}.reference-list h3{font-size:25px}.reference-list p{font-size:14px;color:var(--muted);margin:12px 0 0}.reference-list .email-contact{font-size:14px}@media(max-width:760px){.reference-list{grid-template-columns:1fr;gap:30px}.references{padding:35px 0 45px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.affiliation .school-cheer{transition:none}.school-name:is(:hover,:focus) .school-cheer i{animation:none}}
   </style>
 </head>
@@ -27,7 +28,7 @@
   <div class="wrap">
     <header>
       <a class="wordmark" href="#home">Gerardo Sanz-Maldonado</a>
-      <nav aria-label="Main navigation"><a href="#home">About</a><a href="#research">Research</a><a href="cv.pdf">CV</a></nav>
+      <nav aria-label="Main navigation"><a href="#home">About</a><a href="#research">Research</a><a href="#references">References</a><a href="cv.pdf">CV</a></nav>
     </header>
     <main id="main">
       <section class="intro" id="home" aria-labelledby="name">
@@ -36,7 +37,7 @@
           <h1 id="name"><span>Gerardo</span><span>Sanz-Maldonado</span></h1>
           <p class="affiliation">PhD Candidate in Economics<br><span class="school-name" tabindex="0" aria-label="University of Michigan. Go Blue!">University of Michigan<span class="school-cheer" aria-hidden="true">Go Blue!<i>✦</i><i>✧</i><i>✦</i><i>✧</i><i>✦</i><i>✧</i></span></span></p>
           <p class="market-status">I am on the job market for the 2026–2027 hiring season.</p>
-          <button class="email-contact" id="email-contact" type="button" aria-label="Email Gerardo Sanz-Maldonado">sanzg [at] umich [dot] edu</button>
+          <button class="email-contact" id="email-contact" data-email-codes="115,97,110,122,103,64,117,109,105,99,104,46,101,100,117" type="button" aria-label="Email Gerardo Sanz-Maldonado">sanzg [at] umich [dot] edu</button>
           <div class="fields" aria-label="Research interests"><div class="field-row"><span>Public Economics</span><span>Labor Economics</span></div><div class="field-row"><span>Economics of Privacy</span><span>Digital Economics</span></div></div>
         </div>
         <div>
@@ -83,13 +84,16 @@
           <p class="coauthors">With Maggie Levenstein, Matthew Shapiro, Adam Shumway, Evan Totty, and Meifeng Yang</p>
         </article></div>
       </section>
+    <section class="references" id="references" aria-labelledby="references-title"><h2 id="references-title">References</h2><div class="reference-list"><article><h3>James R. Hines Jr.</h3><p>University of Michigan<br>Dissertation co-chair</p></article><article><h3>Matthew D. Shapiro</h3><p>University of Michigan<br>Dissertation co-chair</p></article><article><h3>Joel Slemrod</h3><p>University of Michigan<br>Dissertation committee member</p></article></div></section>
     </main>
     <footer><span>Gerardo Sanz-Maldonado</span><span>University of Michigan · Economics</span></footer>
   </div>
   <script>
-    document.getElementById('email-contact').addEventListener('click', function () {
-      const address = String.fromCharCode(115,97,110,122,103,64,117,109,105,99,104,46,101,100,117);
-      window.location.href = 'mailto:' + address;
+    document.querySelectorAll('[data-email-codes]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const address = String.fromCharCode(...button.dataset.emailCodes.split(',').map(Number));
+        window.location.href = 'mailto:' + address;
+      });
     });
   </script>
 </body>
