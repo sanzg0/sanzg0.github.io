@@ -15,3 +15,7 @@ Edit `index.html` and commit changes to `main`. GitHub Pages republishes the sit
 Once available, upload the CV and paper as `cv.pdf` and `job-market-paper.pdf`, and add links in the homepage and research section. Use these stable filenames when replacing the PDFs. Add the preferred professional email address, other papers, and teaching information when supplied.
 
 All biographical and research text comes from information supplied by Gerardo. The expandable text is a website research summary, not the paper’s formal abstract. No identification strategy, effect sizes, contact details, or job market year have been assumed.
+
+## Job market paper
+
+The latest paper is hosted at https://sanzg0.github.io/job-market-paper.pdf. Replace `job-market-paper.pdf` on `main` when publishing a revised draft; keep this filename so links in circulated copies continue to lead to the latest published version. The paper includes a clickable **Latest version** link on its title page.
