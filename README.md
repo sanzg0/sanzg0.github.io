@@ -18,4 +18,4 @@ All biographical and research text comes from information supplied by Gerardo. T
 
 ## Job market paper
 
-The latest paper is hosted at https://sanzg0.github.io/job-market-paper.pdf. Replace `job-market-paper.pdf` on `main` when publishing a revised draft; keep this filename so links in circulated copies continue to lead to the latest published version. The paper includes a clickable **Latest version** link on its title page.
+The latest paper is hosted at https://sanzg0.github.io/job-market-paper.pdf. Replace `job-market-paper.pdf` on `main` when publishing a revised draft; keep this filename so links in circulated copies continue to lead to the latest published version. The paper includes a clickable **Click Here For Latest Version** link on its own line below the title-page date.
