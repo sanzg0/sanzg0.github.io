@@ -16,6 +16,11 @@ Once available, upload the CV and paper as `cv.pdf` and `job-market-paper.pdf`, 
 
 All biographical and research text comes from information supplied by Gerardo. The expandable text is a website research summary, not the paper’s formal abstract. No identification strategy, effect sizes, contact details, or job market year have been assumed.
 
-## Job market paper
+## Job market paper and online appendix
 
-The latest paper is hosted at https://sanzg0.github.io/job-market-paper.pdf. Replace `job-market-paper.pdf` on `main` when publishing a revised draft; keep this filename so links in circulated copies continue to lead to the latest published version. The paper includes a clickable **Click Here For Latest Version** link on its own line below the title-page date.
+The website offers separate PDFs at stable addresses:
+
+- Main paper: https://sanzg0.github.io/job-market-paper.pdf
+- Online appendix: https://sanzg0.github.io/job-market-paper-online-appendix.pdf
+
+Replace both PDFs together on `main` when publishing a revised draft. Keep these filenames so circulated links continue to lead to the latest published versions. The title pages link to both documents, and cross-document references target their corresponding public PDF destinations. Maintain a combined paper-and-appendices version separately for job applications.
